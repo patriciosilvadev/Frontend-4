@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PEBMED - ADMINA - Login</title>
+    <!-- Icon browser tab -->
+    <link rel="shortcut icon" href="assets/img/pebmed-60.png">
+    <!-- Bootstrap CSS -->
+    <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS do projeto -->
+    <link href="assets/css/login.css" rel="stylesheet">
+</head>
+
+<body> 
+   <!-- inicio main-nav -->
+    <div class="main-nav" ></div>
+        <div class="container">
+                <div class="card card-container">
+                    <img id="profile-img" class="profile-img-card" src="assets/img/logo_peb.png" class="img-responsive" alt="" />
+                        <p class="versao">ADMIN - Versão 1.0</a></p>
+                        <p id="profile-name" class="profile-name-card"></p>
+
+                    <!-- Início do campo form de login -->
+                    <form class="form-signin">
+                        <span id="reauth-email" class="reauth-email"></span>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                        <div id="remember" class="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Lembrar
+                            </label>
+                        </div>
+                       <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit"> <a href="index.html">Fazer login</a></button>
+                    </form><!-- Fim-->   
+               </div>
+        </div>	
+</body>
+</html>

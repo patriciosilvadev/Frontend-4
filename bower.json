@@ -1,0 +1,22 @@
+{
+  "name": "cms",
+  "description": "Html do cms",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "latest",
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "datatables.net": "^1.10.12",
+    "datatables.net-bs": "^1.10.12"
+  }
+}

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PEBMED - ADMIN - LISTAR CONTEÚDO</title>
+
+    <!-- Icon browser tab -->
+    <link rel="shortcut icon" href="assets/img/pebmed-60.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--CSS DataTable-->
+
+    <link href="assets/css/custom.css" rel="stylesheet">
+    
+    
+    <!-- CSS do projeto -->
+    <link href="assets/css/estilo.css" rel="stylesheet">
+
+
+    <!-- Fonts customizáveis -->
+    <link href="assets/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- CSS icones font do whitebook-->
+    <link href="assets/icons whitebook/styles.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div id="wrapper">
+
+           <!-- Inicio da navegação -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+<!-- logo e menu toggle -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Menu Toggle mobile</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      <a class="navbar-brand" href="index.html"><img src="assets/img/logo_peb.png" class="img-responsive" alt=""></a>
+  </div>
+
+
+<!-- Barra de menu superior -->
+<ul class="nav navbar-right top-nav">
+  <li class="dropdown">
+      <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Administrador <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li>
+      <a href="cadastrar_usuario.html">Cadastrar</a>
+      </li>
+
+      <li>
+      <a href="listar_usuarios.html">Visualizar</a>
+      </li>
+
+
+
+      <li class="divider"></li>
+    </ul>
+  </li>
+  <li>
+      <a href="login.html"><i class="fa fa-fw fa-sign-out"></i> Sair</a>
+  </li>
+</ul> 
+<div class="main-nav" ></div><!--fim-->
+
+<!-- Menu lateral -->
+<div class="collapse navbar-collapse navbar-ex1-collapse">
+  <ul class="nav navbar-nav side-nav">
+    <li class="active">
+    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  </li>
+
+<li>
+    <a href="listar_conteudo.html"><i class="fa fa-files-o"></i> Listar categorias</a>
+</li>
+
+<li>
+    <a href="javascript:;" data-toggle="collapse" data-target="#conteudos"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Conteúdo <i class="fa fa-fw fa-caret-down"></i></a>
+  <ul id="conteudos" class="collapse">
+
+  <li>
+      <a href="criar_conteudo.html">Criar conteúdo</a>
+  </li>
+
+  <li>
+      <a href="editar_conteudo.html">Editar conteúdo</a>
+  </li>
+
+  </ul>
+</li>
+
+  <li>
+    <a href="javascript:;" data-toggle="collapse" data-target="#admin"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Administrador <i class="fa fa-fw fa-caret-down"></i></a>
+      <ul id="admin" class="collapse">
+      <li>
+      <a href="cadastrar_usuario.html">Cadastrar</a>
+      <li>
+      <a href="listar_usuarios.html">Listar</a>
+      </li>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>     
+</nav><!-- fim navevegação-->
+
+            <!-- conteúdo da página -->
+            <div id="page-wrapper">
+
+                <div class="container-fluid">
+
+                    <!-- Cabeçalho da página interna e bradcrunb -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Listar conteúdo <small></small>
+                            </h1>
+
+                            
+                        </div>
+                    </div><!-- fim do cabeçalho interno -->
+
+
+
+                    <!-- Tabela categoria pai-->
+                    <div class="right_col" role="main">
+
+                        <div class="row">
+
+
+                           <div class="col-lg-4">
+
+                            <div class="form-group">
+                                <input class="form-control" id="searchinput" type="search" placeholder="Buscar..." />
+                            </div>
+
+                            <div class="panel panel-default-pai">
+
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Categoria pai</h3>
+                                </div>
+
+
+                                <!-- cabeçalho whitebook -->
+
+                                <div class="panel-body">
+                                    <div class="list-group">
+
+                                      <div class="panel-heading">
+                                        <h3 class="panel-title"><div class="wbook"> Whitebook</div></h3>
+                                    </div><!-- fim -->
+
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-prescricao02"></i> Prescrição <span class="label label-info">id aqui</span> </i>
+
+                                    </a>
+
+
+
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-medicamentos"></i> Medicamentos 
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-calculadora"></i> Calculadoras e Escores
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <span class="icon-i-pathology" aria-hidden="true"></span> CID - CID 10
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        SUS - Procedimentos
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-suporte"></i> Suporte
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-rotinas"></i> Rotinas
+                                    </a>
+
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-orientacoes"></i> Orientações ao paciente
+                                    </a>
+
+
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-lab02"></i> laboratório
+                                    </a>
+
+
+
+                                    <a href="#" class="list-group-item">
+                                        <i class="fa fa-chevron-right pull-right"></i>
+                                        <i class="icon-procedimentos"></i> Procedimentos
+                                    </a>
+
+
+                                    <!-- cabeçalho pediatria -->
+                                    <div class="panel-heading">
+                                     <h3 class="panel-title"><div class="pediatria"> Pediatria</div></h3>
+                                 </div><!-- fim -->
+
+
+                                 <a href="#" class="list-group-item">
+                                    <i class="fa fa-chevron-right pull-right"></i>
+                                    <i class="icon-condutapediatrica-teste"></i> Condutas pediátricas
+                                </a>
+
+
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-chevron-right pull-right"></i>
+                                    <i class="icon-drogaspediatricas"></i> Drogas pediatricas
+                                </a>
+
+
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-chevron-right pull-right"></i>
+                                    <i class="icon-vacinacao"></i> Vacinação
+                                </a>
+
+
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-chevron-right pull-right"></i>
+                                    <i class="icon-prescricoespediatricas"></i> Prescrições pediátricas 
+                                </a>
+
+
+                                <a href="#" class="list-group-item">
+                                    <i class="fa fa-chevron-right pull-right"></i>
+                                    <i class="icon-calculadoraspediatricas"></i> Calculadoras pediatricas 
+                                </a>
+
+
+                                <!-- cabeçalho clínica e especialidades -->
+                                <div class="panel-heading">
+                                 <h3 class="panel-title"><div class="clinicas"> Clinica e Especialidades</div></h3>
+                             </div><!-- fim -->
+
+
+                             <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <i class=""></i> Guia de diaguinosticos
+                            </a>
+
+
+                            <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <i class=""></i> Doenças
+                            </a>
+
+
+                            <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <span class=""></span> Critérios diagnósticos 
+                            </a>
+
+
+                            <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <i class=""></i> Guia de antimicrobianos
+                            </a>
+
+
+                            <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <i class=""></i> Infusão 
+                            </a>
+
+
+                            <a href="#" class="list-group-item">
+                                <i class="fa fa-chevron-right pull-right"></i>
+                                <i class=""></i> Reposição eletrolítica  
+                            </a><!-- fim -->
+
+
+                            <!-- Cabeçalho Ginecologia e ostetrícia -->
+
+                            <div class="panel-heading">
+                             <h3 class="panel-title"><div class="ginecologia"> Ginecologia e Obstetrícia</div></h3>
+                         </div>
+
+                         <a href="#" class="list-group-item">
+                            <i class="fa fa-chevron-right pull-right"></i>
+                            <i class=""></i> Condutas Ginecológicas 
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-chevron-right pull-right"></i>
+                            <i class=""></i> Pré-Natal
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-chevron-right pull-right"></i>
+                            <span class=""></span> Intercorrências Obstétricas 
+                        </a>
+
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-chevron-right pull-right"></i>
+                            <i class=""></i> Parto e Puerpério
+                        </a>
+
+
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-chevron-right pull-right"></i>
+                            <i class=""></i> calculadoras Obstétricas 
+                        </a><!-- Fim -->
+
+
+                        <!-- Cabeçalho Cirurgia e Especialidades -->
+
+
+                        <div class="panel-heading">
+                         <h3 class="panel-title"><div class="cirurgia"> Cirurgias e Especialidades</div></h3>
+                     </div>
+
+
+                     <a href="#" class="list-group-item">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <i class=""></i> Prescrições Cirurgicas  
+                    </a>
+
+                    <a href="#" class="list-group-item">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <i class=""></i> Condutas Cirurgicas
+                    </a>
+
+                    <a href="#" class="list-group-item">
+                        <i class="fa fa-chevron-right pull-right"></i>
+                        <span class=""></span> Trauma 
+                    </a><!--fim-->
+
+                </div>
+                <!--nav aria-label="...">
+                  <ul class="pager">
+                    <li><a href="#">Anterior</a></li>
+                    <li><a href="#">Próximo</a></li>
+                </ul>
+            </nav-->
+        </div>
+    </div>  
+</div><!-- fim  da tabela categoria pai -->
+
+
+<!-- categoria filho -->
+
+
+
+<div class="col-md-4">
+  <div class="form-group">
+   <input class="form-control" id="searchinput" type="search" placeholder="Buscar..." />
+</div>
+<div class="panel panel-default-filho">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Categoria filho</h3>
+    </div>
+
+    <div class="panel-body">
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <i class="fa fa-chevron-right pull-right"></i>
+                <i class="fa fa-folder edicao"></i> Cardiologia <span class="label label-info">id aqui</span>
+            </a>  
+        </div>
+                                    <!--nav aria-label="...">
+                                      <ul class="pager">
+                                        <li><a href="#">Anterior</a></li>
+                                        <li><a href="#">Próximo</a></li>
+                                      </ul>
+                                  </nav-->
+                              </div>
+                          </div>
+                      </div><!-- fim categoria filho -->
+
+
+                      <!-- Lista Conteúdo -->
+
+                      <div class="col-lg-4">
+
+                        <div class="form-group">
+                            <input class="form-control" id="searchinput" type="search" placeholder="Buscar..." />
+
+                        </div>
+
+                        <div class="panel panel-default-conteudo">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Conteúdo </h3>
+                            </div>
+                            
+
+                            <!-- cabeçalho whitebook -->
+
+
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="criar_conteudo.html" class="list-group-item">
+                                      <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                                      Angina Estável (Ambulatório)  <span class="label label-info">id aqui</span>
+                                  </a>
+                                  <a href="#" class="list-group-item">
+                                      <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                                      Bradiarritmias 
+                                  </a>
+                                  <a href="#" class="list-group-item">
+                                     <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                                     Cardiopatia por Estresse
+                                 </a>
+                                 <a href="#" class="list-group-item">
+                                   <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                                   Crise Hipertensiva
+                               </a>
+                               <a href="#" class="list-group-item">
+                                 <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                                 Discrasia por Anticoagulante 
+                             </a>
+                             <a href="#" class="list-group-item">
+                              <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                              Dissecção Aórtica
+                          </a>
+                          <a href="#" class="list-group-item">
+                            <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                            Doença Arterial Periférica
+                        </a>
+
+                        <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                     <a href="#" class="list-group-item">
+                         <i class="fa fa-edit pull-right btn btn-ver"></i> 
+                         Edema Agudo de Pulmão Hipertensivo 
+                     </a>
+
+                 </div>
+                                    <!--nav aria-label="...">
+                                      <ul class="pager">
+                                        <li><a href="#">Anterior</a></li>
+                                        <li><a href="#">Próximo</a></li>
+                                      </ul>
+                                  </nav-->
+                              </div>
+
+
+                          </div>
+
+
+
+
+                          <!-- fim tabela conteudo -->     
+                      </div><!--fim -->       
+                  </div>
+              </div><!-- fim do page-wrapper - contúdo central da página -->
+
+
+              <!-- Plugin jQuery -->
+              <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+
+              <!-- Plugin JavaScript geral das páginas -->
+              <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+              <!-- Jquery e Bootstrap de Datatables -->
+              <script src="assets/vendors/datatables.net/js/jquery.dataTables.js"></script>
+              <script src="assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script> 
+
+              <!-- Scripts customizável -->
+              <script src="assets/tabelas/js/custom.js"></script>
+
+          </body>
+          </html>
